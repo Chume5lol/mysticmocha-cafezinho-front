@@ -1,0 +1,18 @@
+.overlay{
+    position:fixed;
+    inset:0;
+    background-color: #5dbdce;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.modal{
+    width: 40rem;
+    height: 45rem;
+
+    background:white;
+    border-radius:12px;
+    padding:24px;
+}

@@ -1,0 +1,65 @@
+
+.tickets-div {
+    flex: 1;
+    width: calc(100vw - 5rem);
+    overflow: auto;
+    height: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    margin-top: 5rem;
+}
+
+.tickets-div.expanded {
+    width: calc(100vw - 20rem);
+}
+
+.tickets-div {
+    flex: 1;
+    min-width: 0;
+    overflow: auto;
+    margin-top: 5rem;
+}
+
+
+.tickets-table :nth-child(1) {
+    width: 5%;
+    
+}
+
+.tickets-table {
+    border: 3px solid #378c9b;
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 95%;
+    text-align: center;
+    border-collapse:collapse;
+    overflow:hidden;
+    background-color: white;
+}
+
+.tickets-table th {
+    
+    border: 1px solid #000000;
+    width: 5vw;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-size: 1.2em;
+    background-color: #b9f4ff;
+}
+
+.tickets-table tbody td {
+    border-bottom: 1px solid #112216;
+    height: 4rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+}
+
+.tickets-table thead th {
+    height: 3rem;
+}
+
+.tickets-table .tickets th {
+    border: 3px solid #378c9b;
+    color: #378c9b;
+}
+

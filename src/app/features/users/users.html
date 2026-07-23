@@ -1,0 +1,70 @@
+<div class="users-div" [class.expanded]="sidebarService.isExpanded()">
+    <button class="newUser" (click)="abrirModal()">Criar usuário</button>
+    <app-modal [aberto]="modalAberto()" (fechar)="fecharModal()" class="modalUsers">
+
+        <button (click)="fecharModal()" class="closeModal">X</button>
+        
+        <h2>Novo usuário</h2>
+
+        <label for="">First Name:</label>
+        <input type="text" [(ngModel)]="firstName" [ngModelOptions]="{standalone: true}">
+        <label for="">Last Name:</label>
+        <input type="text" [(ngModel)]="lastName" [ngModelOptions]="{standalone: true}">
+        <label for="">Nickname:</label>
+        <input type="text" [(ngModel)]="nickname" [ngModelOptions]="{standalone: true}">
+        <label for="">Email:</label>
+        <input type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+        <label for="">Department:</label>
+        <input type="text" [(ngModel)]="department" [ngModelOptions]="{standalone: true}">
+        <label for="">Password:</label>
+        <input type="text" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+        <label for="">UserRole:</label>
+        <select name="" id="" [(ngModel)]="role" [ngModelOptions]="{standalone: true}">
+            <option value="" disabled selected></option>
+            <option value="USER">USER</option>
+            <option value="AGENT">AGENT</option>
+            <option value="ADMINISTRATOR">ADMINISTRATOR</option>
+        </select>
+        <br>
+        <button (click)="registerUser()">Salvar</button>
+
+
+
+    </app-modal>
+    <table class="users-table tableAllUsers">
+        <thead>
+            <tr class="users">
+                <th>#ID</th>
+                <th>Nome</th>
+                <th>Nickname</th>
+                <th>E-mail</th>
+                <th>Departamento</th>
+                <th>Perfil</th>
+                <th>Último Login</th>
+                <th>Status</th>
+                <th>Opções</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (user of allUsers(); track user; let i = $index) {
+                
+            <tr>
+                <td class="idUser">{{ i+1 }} </td>
+                <td>{{ user.firstName + " " + user.lastName }} </td>
+                <td>{{ user.nickname }} </td>
+                <td>{{ user.email }} </td>
+                <td>{{ user.department }} </td>
+                <td class="userRolesTable">{{ user.userRoles }} </td>
+                <td>{{ user.lastLogin}} </td>
+                @if (user.status) {
+                <td>Habilitado</td>
+                } @else {
+                <td>Desabilitado</td>
+                }
+                <td class="altUsers"><button class="change">Alterar</button><button class="others">...</button></td>
+            </tr>
+            }
+        </tbody>
+
+    </table>
+</div>

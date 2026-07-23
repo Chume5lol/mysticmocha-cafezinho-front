@@ -1,0 +1,94 @@
+.sidebarmain {
+    transition: width 0.4s ease-in-out;
+    background-image: linear-gradient(#03316d);
+    margin-top: 5rem;
+    display: inline-block;
+    height: 100%;
+}
+
+
+
+.sidebarmain :nth-child(01) {
+    transition: width 0.4s ease-in-out;
+}
+
+.sidebarmain button {
+    transition: width 0.4s ease-in-out;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.2em;
+    border: #fafafa 3px solid;
+}
+
+.sidebarmain button {
+    transition: width 0.4s ease-in-out;
+    background-color: #3bacce;
+    margin: 1rem;
+    border-radius: 10000px;
+}
+
+.sidebarmain h1 {
+    color: #112216;
+}
+
+.sidebarmain {
+    transition: width 0.4s ease-in-out;
+    overflow: hidden;
+}
+
+.sidebarmain {
+    width: 5rem;
+    flex-shrink: 0;
+    transition: width 0.4s ease-in-out;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.sidebarmain.expanded {
+    width: 20rem;
+
+}
+
+.sidebarmain a {
+    border-radius: 12px;
+}
+
+
+.sidebarmain a {
+    transition: width 0.4s ease-in-out;
+    display: block;
+    padding-right: 5rem;
+    font-size: 1.4em;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #03316d;
+    border: 2px solid #03316d;
+    margin-top: 10px;
+    padding: 0.9rem;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-weight: 600;
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    .sidebarmain {
+        width: 3rem;
+    }
+
+    .sidebarmain button {
+        transition: width 0.4s ease-in-out;
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.8em;
+    }
+
+    .sidebarmain.expanded {
+        width: 10rem;
+    }
+
+    .sidebarmain a {
+        font-size: 1em;
+    }
+
+}

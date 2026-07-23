@@ -1,0 +1,35 @@
+
+<div class="tickets-div" [class.expanded]="sidebarService.isExpanded()">
+    
+    <table class="tickets-table tableAllTickets">
+        <thead>
+            <tr class="tickets">
+                <th>#ID</th>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Criado em:</th>
+                <th>Status</th>
+                <th>Prioridade</th>
+                <th>Categoria</th>
+                <th>Solicitante</th>
+                <th>Agente</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (ticket of allTickets(); track ticket.id) {
+            <tr>
+                <td>{{ ticket.id }} </td>
+                <td>{{ ticket.title }} </td>
+                <td>{{ ticket.description }} </td>
+                <td>{{ ticket.createdAt }} </td>
+                <td>{{ ticket.status }} </td>
+                <td>{{ ticket.priority }} </td>
+                <td>{{ ticket.categority }} </td>
+                <td>{{ ticket.requester}} </td>
+                <td>{{ ticket.agent }} </td>
+            </tr>
+            }
+        </tbody>
+
+    </table>
+</div>

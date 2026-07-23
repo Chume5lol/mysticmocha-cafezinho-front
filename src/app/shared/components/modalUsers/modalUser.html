@@ -1,0 +1,13 @@
+@if (aberto()) {
+
+<div class="overlay" (click)="fecharModal()">
+
+    <div class="modal" (click)="$event.stopPropagation()">
+
+        <ng-content></ng-content>
+
+    </div>
+
+</div>
+
+}

@@ -1,0 +1,31 @@
+.main-template {
+    flex: 1;
+    width: calc(100vw - 5rem);
+    overflow: auto;
+    height: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    margin-top: 5rem;
+}
+
+.main-template h1{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+.table {
+    margin: 0 auto;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    background-color: #b9f4ff;
+}
+
+.table th, .table td {
+    width: 20%;
+    border-top: 1px solid #112216;
+    border-left: 1px solid #112216;
+    background-color: #b9f4ff;
+}

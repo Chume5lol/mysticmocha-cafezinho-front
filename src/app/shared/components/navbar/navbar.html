@@ -1,0 +1,24 @@
+<header>
+    <nav class="navbar">
+        <ul class="navbar-ul">
+            <li>
+                @if (authService.estaLogado()) {}</li>
+            <li class="logoNavbar"><a href="/home" class="iconenavbar"><img [src]="'/images/MysticMocha-ico.png'" alt="MM" ></a></li>
+            <li class="logoNavbar"><a class="black" href="/home">Mystic</a><a class="white" href="/home">Mocha</a></li>
+            
+            
+            <li>
+                @if (authService.estaLogado()) {
+                <a href="" (click)="logout()" >Logout<img [src]="'/images/sair.png'" alt="" class="logout-ico"></a>
+                
+                } @else {
+                <a >
+                
+                </a>
+                }
+
+            </li>
+        </ul>
+    </nav>
+</header>
+

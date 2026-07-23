@@ -1,0 +1,17 @@
+
+
+    @if (authService.estaLogado() && sidebarService.isExpanded()) {
+    <div class="sidebarmain" [class.expanded]="sidebarService.isExpanded()">
+        <button (click)="toggleSidebar()"><h1>X</h1></button>
+        <a href="#" class="">Abrir chamado</a>
+        <a>Chamados gerais</a>
+        <a class="" routerLink="/tickets/admin">Meus chamados</a>
+        <a href="#" class="">Dashboard</a>
+        <a class="" routerLink="/users">Usuários</a>
+        <a href="#">Departamentos</a>
+    </div>
+    } @if (authService.estaLogado() && !sidebarService.isExpanded()) {
+        <div class="sidebarmain" >
+            <button (click)="toggleSidebar()"><h1>X</h1></button>
+        </div>
+    }
